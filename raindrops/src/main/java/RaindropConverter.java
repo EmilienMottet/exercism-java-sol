@@ -1,20 +1,20 @@
 class RaindropConverter {
 
   String convert(int number) {
-    String res = "";
+    StringBuilder res = new StringBuilder();
     if (number % 3 == 0) {
-      res += "Pling";
+      res.append("Pling");
 
     }
     if (number % 5 == 0) {
-      res += "Plang";
+      res.append("Plang");
 
     }
     if (number % 7 == 0) {
-      res += "Plong";
+      res.append("Plong");
 
     }
-    return res == "" ? "" + number : res;
+    return res.length() == 0 ? Integer.toString(number) : res.toString();
   }
 
 }
