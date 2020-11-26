@@ -4,7 +4,7 @@ local lang = std.extVar('lang');
 local JavaTestJob(name) = {
   ['.' + lang + '-' + name + '-gitlab-ci.yml']: {
     default: {
-      image: 'gradle:latest',
+      image: 'gradle:jdk11',
     },
     ['test-' + lang + '-' + name + '-exercism']: {
       script: [
